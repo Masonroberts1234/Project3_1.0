@@ -35,21 +35,20 @@ nav ul li a {
 }
 
 nav ul li:hover {
-  background-color: rgba(255, 255, 0, 0.5);
   list-style-image: url(wheelmarker.png);
 }
 
 nav ul li a:hover{
+  background-color: rgba(255, 255, 0, 0.5)
   color: yellow;
   color: rgba(255, 255, 25  , 1);
 }
 
-
-#leftsection {
+#leftsection > p {
   font-size: 22px;
 }
 
-#leftsection p#firstpar::first-line{
+#firstpar:first-line{
   text-transform: uppercase;
 }
 
@@ -60,20 +59,25 @@ blockquote {
   font-family: ComicSansMS, Times, cursive;
 }
 
-blockquote p{
-  quotes: "\0022" "\0022";
+blockquote p:before{
+  content: open-quote;
+}
+
+blockquote p:after{
+  content: close-quote;
 }
 
 /*can I somehow make #rightsection { h1{} h2{} p{} } ? */
 #rightsection h1 {
   font-size: 22px;
   font-kerning: 3px;
-  text-decoration: none;
+  font-weight: normal;
   text-align: center;
 }
 #rightsection  h2 {
     font-size: 18px;
     text-align: right;
+    font-weight: normal;
     text-decoration: none;
 }
 #rightsection  p {
@@ -84,6 +88,6 @@ blockquote p{
 
 address {
   text-align: center;
-  font-style: normal;
+  font-style: italic;
   font-size: 16px;
 }
